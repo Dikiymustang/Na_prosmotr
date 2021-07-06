@@ -6,20 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Адаптивный макет--> 
 		<link rel="stylesheet" href="css/bootstrap.min.css"> 
 		<link rel="stylesheet" href="css/style.css"> 
-		
+<scrypt>	
+$(function(){
+$('#privet').click(function(){alert('Привет!')});
+});	
+</scrypt>
+<!-- для вывода функции даем в html id privet нужному элементу 
+должен быть подключен jquery-->
+
+   </head>
    
 	<body>
 	
-	  <div class="top">
-					<!--<div class="menu">
-					<ul>
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Цены</a></li>
-					<li><a href="#">Контакты</a></li>
-					</ul>
-					</div>-->  
-				</div> 
 				
 		<div id="privet">
 		Тут должно появляться окошко со скриптом
@@ -28,7 +26,7 @@
 
 <!-- Script--> 	
 	<script src="jquery-3.6.0.min.js"></script>
-	<script src="script.js"></script>	
+	<script src="scrypt.js"></script>	
 
 </body>
 </html> 
