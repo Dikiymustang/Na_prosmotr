@@ -191,6 +191,10 @@ main {
 #yourcity {
 	cursor: pointer;
 }
+.paragrafGorod {
+	color: #523b20; 
+	text-shadow: 2px 2px 4px #e1b788;
+}
 .topmenu {
 	text-align: center;
 }
@@ -245,7 +249,7 @@ main {
 }
 
 .shadow {
-    background: #fac7b9;
+    background: #e1b788;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     padding: 12px;
    }
@@ -289,7 +293,7 @@ main {
 	padding-left: 20px; 
 	padding-top: 15px; 
 	color: #523b20; 
-	text-shadow: 2px 2px 4px #e1b788; /* Параметры тени */
+	text-shadow: 2px 2px 4px #e1b788;
 }
 .opisanie {
 	font-style: italic;
@@ -326,7 +330,9 @@ background: #e1b788;
 	border: 3px solid #523b20;
 	border-radius: 5px;
 }
-
+.colorForm {
+	background: #e1b788; 
+} 
 
 /* footer */
 footer {
