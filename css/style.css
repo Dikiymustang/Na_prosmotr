@@ -253,40 +253,57 @@ main {
 /* catalog */
 .catalog {
 	display: flex;
-	gap: 8px;
+	gap: 12px;
 }
 .cat-blocks {
 	flex: 1 1 auto;
+ 
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
-	gap: 8px;
-	padding: 15px 50px 15px 160px; 
+	gap: 12px;
+	padding: 15px 60px 15px 60px; 
+	justify-content: space-between; 
 	text-align: center; 
-	background: #1e150a; 
+	background: #a6ad71; 
+
 }
 .cat-unit {
 	height: 210px;
 	width: 340px;
 	background: #e1b788;
+	border: 5px solid #523b20; 
+	border-radius: 12px; 
 }
 
-/* product */
+/*product*/
+.pro{
+	display:flex;
+	gap:8px;
+}
 .product {
 	width: 100%;
+	margin-left:30px;
+	background: #d88f7c; 
+}
+.zagolovokProduct {
+	padding-left: 20px; 
+	padding-top: 15px; 
+	color: #523b20; 
+	text-shadow: 2px 2px 4px #e1b788; /* Параметры тени */
+}
+.mainproduct {
+background: #e1b788; 
 }
 .gallery-desk {
 	width: 530px;
 	float: left;
+	margin-right: 10px;
 }
 .main-image {
 	padding: 24px;
-	background: #fff;
-	border: 1px solid #000;
-	border-radius: 25px;
-}
-.gallery-desk img {
-	cursor: zoom-in;
+	background: #a6ad71;
+	border: 3px solid #523b20;
+	border-radius: 20px;
 }
 .gallery {
 	margin-top: 10px;
@@ -294,20 +311,13 @@ main {
 	justify-content: space-between;
 }
 .small-image {
-	width: 170px;
-	height: 170px;
+	width: fit-content;
 	padding: 4px;
-	background: #fff;
-	border: 1px solid #000;
+	background: #a6ad71;
+	border: 3px solid #523b20;
 	border-radius: 5px;
 }
-.small-image > img {
-	max-height: 160px;
-	max-width: 160px;
-}
-.description-desk {
-	margin-left: 540px;
-}
+
 
 /* footer */
 footer {
