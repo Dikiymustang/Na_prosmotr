@@ -291,6 +291,15 @@ main {
 	color: #523b20; 
 	text-shadow: 2px 2px 4px #e1b788; /* Параметры тени */
 }
+.opisanie {
+	font-style: italic;
+	padding-left: 10px; 
+	color: #1e150a; 
+}
+.dostavka { 
+	text-align: center; 
+	color: #1e150a; 
+}
 .mainproduct {
 background: #e1b788; 
 }
