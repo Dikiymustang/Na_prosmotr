@@ -13,6 +13,9 @@ p {
 .container {
 	width: auto;
 	margin: 0 auto;
+main {
+	background: #393f0b;
+}
 
 }
 .wrapper {
@@ -31,6 +34,48 @@ p {
 	padding: 25px;
 	color: #000;
 }
+
+/* popup */
+.popup-desk {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.3);
+}
+.popup-desk.active {
+	display: block;
+}
+.popup {
+	position: absolute;
+	left: calc(50% - 150px);
+	top: 300px;
+	width: 300px;
+	background: #fff;
+	border-radius: 20px;
+	padding: 30px;
+	box-sizing: border-box;
+}
+.gorod p {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.gorod button {
+	border: none;
+	color: white;
+	width: calc(50% - 10px);
+}
+.gorod button:first-of-type {
+	background: green;
+	margin: 0 10px 0 0;
+}
+.gorod button:last-of-type {
+	background: red;
+	margin: 0 0 0 10px;
+}
+
 
 
 /* header */
@@ -204,6 +249,65 @@ main {
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     padding: 12px;
    }
+
+/* catalog */
+.catalog {
+	display: flex;
+	gap: 8px;
+}
+.cat-blocks {
+	flex: 1 1 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 8px;
+	padding: 15px 50px 15px 160px; 
+	text-align: center; 
+	background: #1e150a; 
+}
+.cat-unit {
+	height: 210px;
+	width: 340px;
+	background: #e1b788;
+}
+
+/* product */
+.product {
+	width: 100%;
+}
+.gallery-desk {
+	width: 530px;
+	float: left;
+}
+.main-image {
+	padding: 24px;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 25px;
+}
+.gallery-desk img {
+	cursor: zoom-in;
+}
+.gallery {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.small-image {
+	width: 170px;
+	height: 170px;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.small-image > img {
+	max-height: 160px;
+	max-width: 160px;
+}
+.description-desk {
+	margin-left: 540px;
+}
 
 /* footer */
 footer {
@@ -468,6 +572,7 @@ CONTROLLERS - PURE CSS 3 THEME
 	border-left-color: #ccc;
 	right: 15px;
 }
+
 /* responsive rules */
 @media (max-width: 1199px) {
 }
