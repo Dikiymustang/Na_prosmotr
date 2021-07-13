@@ -285,7 +285,7 @@ main {
 	gap:8px;
 }
 .product {
-	width: 100%;
+	width: calc(100% - 30px);
 	margin-left:30px;
 	background: #d88f7c; 
 }
@@ -308,15 +308,16 @@ main {
 background: #e1b788; 
 }
 .gallery-desk {
-	width: 530px;
+	width: 496px;
 	float: left;
-	margin-right: 10px;
+
 }
 .main-image {
-	padding: 24px;
+	padding: 4px;
 	background: #a6ad71;
 	border: 3px solid #523b20;
 	border-radius: 20px;
+
 }
 .gallery {
 	margin-top: 10px;
@@ -324,7 +325,8 @@ background: #e1b788;
 	justify-content: space-between;
 }
 .small-image {
-	width: fit-content;
+	width: 160px;
+	height: 100px; 
 	padding: 4px;
 	background: #a6ad71;
 	border: 3px solid #523b20;
