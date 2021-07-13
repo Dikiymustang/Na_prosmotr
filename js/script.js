@@ -71,15 +71,15 @@ function changeimage(event) { // аргументом будет событие 
 //Gorod//
 $(function(){
     $('#yourcity').click(function(){
-        $('.popup-desk').addClass('active').html('<div class="popup gorod"><p>Ваш город: Москва</p><p>Выберите город:</p><button class="bratsk" type="button">Москва</button><button class="london"  type="button">Санкт-Петербург</button><button class="moscow" type="button">Новосибирск</button><button class="piter" type="button">Сочи</button></div>');
+         $('.popup-desk').addClass('active').html('<div class="popup gorod"><p>Ваш город: Москва</p><p>Выберите город:</p><button class="moscow" type="button">Москва</button><button class="speterburg"  type="button">Санкт-Петербург</button><button class="novosib" type="button">Новосибирск</button><button class="sochi" type="button">Сочи</button></div>');
         $('.gorod button').click(function(){
-            if ($(this).hasClass('london')) {
+            if ($(this).hasClass('moscow')) {
                 $('#yourcity').html('<p>Ваш город: Москва</p>');
-            } else if ($(this).hasClass('bratsk')) {
+            } else if ($(this).hasClass('speterburg')) {
                 $('#yourcity').html('<p>Ваш город: Санкт-Петербург</p>');
-            } else if ($(this).hasClass('moscow')) {
+            } else if ($(this).hasClass('novosib')) {
                 $('#yourcity').html('<p>Ваш город: Новосибирск</p>');
-            } else if ($(this).hasClass('piter')) {
+            } else if ($(this).hasClass('sochi')) {
                 $('#yourcity').html('<p>Ваш город: Сочи</p>');
             }
             $('.popup-desk').click();
@@ -100,8 +100,32 @@ $(function(){
             }, 1000);
         }
     });
-
-//Korzina//
+    
+    $('button.basket').click(function(){
+        $('.popup-desk').addClass('active');
+        $('.popup-desk').html('<div class="popup"></div>');
+        $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
+        $('.basket').html(6);
+    });
+    
+    $('.popup-desk').click(function(e){
+        if (e.target == this) {
+            $(this).removeClass('active');
+            $('.popup-desk').empty();
+            $('.basket').html(5);
+        }
+    });
+    
+    $(document).on('click', '.register', function(e){
+        e.preventDefault();
+        if ($('.basket').html()==6) {
+            $('.popup').html('<p class="popup-header">Личный кабинет закрыт на ремонт.<br>Регистрации не будет до 1 января.</p><a href="https://yandex.ru/" class="register">Войти</a>');
+            $('.basket').html(5);
+        } else {
+            $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
+            $('.basket').html(6);
+        }
+    });
     
     $(document).on('click', '.order .del > div', function(){
         tovarDelete(this);
@@ -111,18 +135,29 @@ $(function(){
         tovarChange(this);
     });
     
-  
+    if ($('#date').length) {
+        $('#date').click(function(){
+            if ($('#date').val()) {
+                selected_day = makeSelectedDate($('#date').val());
+                makePopup(selected_day.getFullYear(),selected_day.getMonth());
+            } else {
+                makePopup(TODAY.getFullYear(),TODAY.getMonth());
+            }
+        });
+    
+        $('#date').mask('00-00-0000');
+    }
     
     
-    $('#orderdata').on('submit', function(e){// отправка формы
+    $('#orderdata').on('submit', function(e){
         e.preventDefault();
         orderAction();
     })
-    
-    if ($('.product').length) {
+        if ($('.product').length) {
         $('.main-image').on('click', 'img', seebigimage);
         $('.small-image').on('click', 'img', changeimage);
-   
     }
 });
- 
+
+
+
