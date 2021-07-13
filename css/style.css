@@ -247,10 +247,7 @@ main {
 
 
 /* main */
-main {
-	flex: 1 1 auto;
-	background: #fff;
-	padding-top: 2px; 
+
 
 }
 
@@ -258,6 +255,12 @@ main {
     background: #e1b788;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     padding: 12px;
+
+   }
+   .textIndex{
+font-size: 22px; 
+font: Arial, sans-serif;
+color: #1e150a; 
    }
 
 /* catalog */
@@ -283,7 +286,7 @@ main {
 	background: #e1b788;
 	border: 5px solid #523b20; 
 	border-radius: 12px; 
-}
+} 
 
 /*product*/
 .pro{
@@ -309,6 +312,7 @@ main {
 .dostavka { 
 	text-align: center; 
 	color: #1e150a; 
+font-family: 'Jura', sans-serif;
 }
 .mainproduct {
 background: #e1b788; 
@@ -354,11 +358,58 @@ max-width: 100%;
 position: absolute;
 right: 10px;
 top: 5px;
-color: red;
+color: #523b20;
 font: bold 30px Arial;
 transform: rotate(45deg);
 cursor: pointer;
 }
+
+/* Order */
+.order {
+	width: 100%;
+}
+table {
+	table-layout: fixed;
+	width: 100%;
+	padding: 10px;
+}
+table tbody tr td {
+	align-content: center;
+	background: #a6ad71;
+}
+.num input {
+	border: 0;
+	width: 50px;
+		background: #e8eeba;
+}
+.del {
+	width: 40px;
+}
+.del > div {
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	text-align: center;
+	font: normal 24px/24px Arial;
+	transform: rotate(45deg);
+	transform-origin: center;
+	background: #d88f7c;
+	color: white;
+	cursor: pointer;
+}
+
+#orderdata {
+	padding-bottom: 30px; 
+	text-align: center;
+	align-content: center;
+}
+.inputArea {
+	background: #e8eeba;
+}
+datalist {
+	background: #d88f7c;
+}
+	
 
 /* footer */
 footer {
@@ -367,7 +418,44 @@ footer {
 	height: 70px; 
 
 }
+.telefon {
+	text-align: right; 
+	padding-bottom: 20px; 
+}
 
+/* footer */
+footer {
+	flex: 0 0 auto;
+	color: #d88f7c;
+}
+.topfooter{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	align-items: center;
+}
+footer .container {
+	justify-content: space-around;
+	gap: 30px;
+	font: 15px/25px,sans-serif;
+}
+.bottomfooter{
+	opacity: 0.6;
+}
+
+.title{
+	color: #1e150a; 
+	text-shadow: 2px 2px 4px #e1b788;
+}
+
+button {
+
+    background-color: #b2987b; 
+	border-radius: 4px; 
+	box-shadow: 1px 1px 2px #e1b788; 
+}
   /*Slider*/
 .jSlider {
 	position: relative;
@@ -643,3 +731,32 @@ CONTROLLERS - PURE CSS 3 THEME
 		margin-left: 5px;
 	}
 }
+@media (min-width: 768px) {
+	.cat-blocks {
+		gap: 4px;
+	}
+	aside {
+		display: block;
+		width: 160px;
+	}
+}
+@media (min-width: 992px) {
+	.cat-blocks {
+		gap: 10px;
+	}
+	aside {
+		width: 260px;
+	}
+}
+@media (min-width: 1200px) {
+	.cat-blocks {
+		gap: 22px;
+	}
+}
+@media (min-width: 1400px) {
+	.cat-blocks {
+		gap: 14px;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap'); 
